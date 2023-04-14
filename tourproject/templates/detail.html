@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-6">
+            <img src="{{toy.img.url}}" height="350" width="350">
+        </div>
+
+        <div class="col-md-6">
+            {{toy.name}}<br>
+            {{toy.desc}}<br>
+            Rs.{{toy.price}}/-<br>
+            <a class="btn btn-primary" href="{% url 'tourapp:update' toy.id %}">update</a>
+            <a class="btn btn-danger" href="{% url 'tourapp:delete' toy.id %}">delete</a>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}
